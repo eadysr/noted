@@ -1,11 +1,18 @@
 .contain-text {
   background-color: white;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: auto;
+  width: 700px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+
+.contain-text h1, p {
+  color: #264653;
+  padding: 30px;
 }
 
 
 
-
-// #d8e2dc
+// d8e2dc 2a9d8f fca311
