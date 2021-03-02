@@ -12,3 +12,31 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+
+
+.contain-back {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(90deg, #fcd5ce, #8ecae6);
+}
+
+.contain-text {
+  background-color: white;
+  text-align: center;
+  padding: 100px;
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 30px;
+  color: black;
+}
+
+p {
+    color: black;
+}
+
+
+// #d8e2dc
