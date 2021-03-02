@@ -4,7 +4,8 @@
   border-radius: 20px;
   margin: auto;
   width: 700px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  color: #264653;
 }
 
 
@@ -13,6 +14,31 @@
   padding: 30px;
 }
 
-
+.contain-text {
+  padding: 30px;
+}
 
 // d8e2dc 2a9d8f fca311
+
+.form-input-sign {
+    text-align: left;
+
+}
+
+
+#log-in-button {
+  background-color: #d8e2dc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+}
+
+#log-in-button:hover {
+  transition: 1.5s;
+  background-color: #b7e4c7;
+}
+
+.contain-text h2 {
+  font-family: 'Fredoka One', cursive;
+}
