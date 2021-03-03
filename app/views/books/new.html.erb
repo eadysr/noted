@@ -1,0 +1,21 @@
+<div class="contain-back">
+  <br>
+  <br>
+  <br>
+  <br>
+    <div class="contain-text">
+      <br>
+    <h2>Add a new book</h2>
+    <br>
+    <div class="form-input-sign">
+      <%= simple_form_for [@user, @book] do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :read_date, :order => [:day, :month, :year] %>
+        <%= f.submit %>
+      <% end %>
+      <br>
+      <%= link_to "Back to user page", user_path(current_user) %>
+    </div>
+  </div>
+</div>

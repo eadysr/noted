@@ -9,6 +9,7 @@
     <%= @books %>
     <br>
     <br>
+    <%= link_to "Add a new book", new_user_book_path(current_user) %>
     <%= link_to "Back to user page", user_path(current_user) %>
   </div>
 </div>
