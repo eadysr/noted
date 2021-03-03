@@ -1,0 +1,15 @@
+<div class="contain-back">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="contain-text">
+    <br>
+    <h1> Hello <%= @user.email %> </h1>
+    <p> Your lists:  </p>
+    <div class = "user-lists-cards">
+      <%= link_to "My read list", user_books_path(current_user) %>
+    </div>
+    <br>
+  </div>
+</div>
