@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :users, only: [:show, :edit, :update] do
-    resources :books, only: [:index, :show, :new, :create, :edit, :update, :delete]
+    resources :books, only: [:index, :new, :create, :delete]
     member do
       get :list
     end
