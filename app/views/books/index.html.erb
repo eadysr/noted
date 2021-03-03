@@ -6,7 +6,9 @@
   <div class="contain-text">
     <br>
     <h1> Your books </h1>
-    <%= @books %>
+    <% @books.each do |book| %>
+      <li> 📖 <%= book.title %></li>
+    <% end %>
     <br>
     <br>
     <%= link_to "Add a new book", new_user_book_path(current_user) %>

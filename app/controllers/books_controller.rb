@@ -10,8 +10,8 @@ class BooksController < ApplicationController
 
   def create
     @user = current_user
-
     @book = Book.new(book_params)
+    @book.user = @user
     if @book.save
       redirect_to user_books_path(current_user)
     else
@@ -29,13 +29,11 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :description, :user_id)
-  end
+    # Date.strptime(params[:read_date])
+    # date_read = params[:book][:read_date]
+    # date = Date.strptime(date_read)
+    # params[:book][:read_date] = date
 
-  def date_params
-    year = params[:book]['read_date(1i)'].to_i,
-    month = params[:book]['read_date(2i)'].to_i,
-    day = params[:book]['read_date(3i)'].to_i
-    read_date = day -- month -- year
+    params.require(:book).permit(:title, :description, :read_date)
   end
 end
