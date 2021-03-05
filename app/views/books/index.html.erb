@@ -7,7 +7,7 @@
     <br>
     <h1> Your books </h1>
     <% @books.each do |book| %>
-      <li> 📖 <%= book.title %></li>
+      <li> 📖 <%= book.title %> - <%= book.read_date %></li>
     <% end %>
     <br>
     <br>
