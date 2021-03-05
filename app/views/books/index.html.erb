@@ -6,12 +6,15 @@
   <div class="contain-text">
     <br>
     <h1> Your books </h1>
-    <% @books.each do |book| %>
-      <li> 📖 <%= book.title %></li>
-    <% end %>
+    <div id="books-index-list">
+      <% @books.each do |book| %>
+        <li> 📖 <%= book.title %> - <%= book.read_date %>
+          <%= link_to 'X', book_path(book.id), method: :delete %></li>
+      <% end %>
+    </div>
     <br>
     <br>
-    <%= link_to "Add a new book", new_user_book_path(current_user) %>
+    <%= link_to "Add a new book", new_user_book_path(current_user) %>   or
     <%= link_to "Back to user page", user_path(current_user) %>
   </div>
 </div>
