@@ -7,7 +7,8 @@
     <br>
     <h1> Your books </h1>
     <% @books.each do |book| %>
-      <li> 📖 <%= book.title %> - <%= book.read_date %></li>
+      <li> 📖 <%= book.title %> - <%= book.read_date %>
+        <%= link_to 'X', book_path(book.id), method: :delete %></li>
     <% end %>
     <br>
     <br>
