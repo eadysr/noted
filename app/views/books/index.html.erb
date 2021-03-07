@@ -6,12 +6,16 @@
   <div class="contain-text">
     <br>
     <h1> Your books </h1>
-    <% @books.each do |book| %>
-      <li> 📖 <%= book.title %></li>
-    <% end %>
+    <div class="book-index-display">
+      <% @books.each do |book| %>
+        <div class="book-index-card">
+          <%= book.read_date %> - <%= book.title %>
+        </div>
+      <% end %>
+    </div>
     <br>
     <br>
-    <%= link_to "Add a new book", new_user_book_path(current_user) %>
+    <%= link_to "Add a new book", new_user_book_path(current_user) %> |
     <%= link_to "Back to user page", user_path(current_user) %>
   </div>
 </div>
