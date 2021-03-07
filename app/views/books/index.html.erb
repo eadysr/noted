@@ -6,10 +6,12 @@
   <div class="contain-text">
     <br>
     <h1> Your books </h1>
-    <div id="books-index-list">
+    <div class="book-index-display">
       <% @books.each do |book| %>
-        <li> 📖 <%= book.title %> - <%= book.read_date %>
-          <%= link_to 'X', book_path(book.id), method: :delete %></li>
+        <div class="book-index-card">
+          On <strong><%= book.read_date %> </strong>you finished <strong><%= book.title %></strong>
+          <%= link_to 'X', book_path(book.id), method: :delete %>
+        </div>
       <% end %>
     </div>
     <br>
