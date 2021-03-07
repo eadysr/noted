@@ -10,12 +10,13 @@
       <% @books.each do |book| %>
         <div class="book-index-card">
           On <strong><%= book.read_date %> </strong>you finished <strong><%= book.title %></strong>
+          <%= link_to 'X', book_path(book.id), method: :delete %>
         </div>
       <% end %>
     </div>
     <br>
     <br>
-    <%= link_to "Add a new book", new_user_book_path(current_user) %> |
+    <%= link_to "Add a new book", new_user_book_path(current_user) %>   or
     <%= link_to "Back to user page", user_path(current_user) %>
   </div>
 </div>

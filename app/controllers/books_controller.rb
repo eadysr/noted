@@ -1,6 +1,10 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.where(user_id: current_user.id)
+    books = Book.where(user_id: current_user.id)
+    books.each do |book|
+      puts book.read(book, book.read_date)
+    end
+    @books = books.order(read_date: :desc)
   end
 
   def new
@@ -15,7 +19,6 @@ class BooksController < ApplicationController
     if @book.save
       redirect_to user_books_path(current_user)
     else
-      raise
       render :new
     end
   end
