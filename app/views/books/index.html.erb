@@ -9,7 +9,7 @@
     <div class="book-index-display">
       <% @books.each do |book| %>
         <div class="book-index-card">
-          <%= book.read_date %> - <%= book.title %>
+          On <strong><%= book.read_date %> </strong>you finished <strong><%= book.title %></strong>
         </div>
       <% end %>
     </div>
