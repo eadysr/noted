@@ -46,4 +46,6 @@ darkMode.addEventListener('click', () => {
   const background = document.querySelector('.contain-back');
   console.log(background);
   background.classList.add('dark');
+  const navbar = document.querySelector('.navbar-lewagon');
+  navbar.classList.add('dark');
 })
