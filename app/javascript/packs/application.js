@@ -38,3 +38,12 @@ document.addEventListener('turbolinks:load', () => {
 
 
 initFlatpickr();
+
+
+const darkMode = document.querySelector("#btn-dark-mode");
+console.log(darkMode);
+darkMode.addEventListener('click', () => {
+  const background = document.querySelector('.contain-back');
+  console.log(background);
+  background.classList.add('dark');
+})

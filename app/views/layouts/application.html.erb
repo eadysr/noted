@@ -12,9 +12,13 @@
   </head>
 
   <body>
+    <div class="contain-back">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+    <br>
+    <button id="btn-dark-mode"> Dark mode... </button>
+  </div>
   </body>
 </html>

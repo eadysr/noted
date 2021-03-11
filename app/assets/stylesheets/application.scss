@@ -20,5 +20,24 @@
 .contain-back {
   height: 100vh;
   width: 100vw;
+    text-align: center;
   background-image: linear-gradient(90deg, #fcd5ce, #8ecae6);
+}
+
+
+
+#btn-dark-mode {
+  background-color: #d8e2dc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  text-decoration: none;
+  border: none;
+}
+
+.dark {
+  // background: linear-gradient(90deg, hsla(285, 42%, 33%, 1) 0%, hsla(333, 54%, 51%, 1) 100%);
+  background: linear-gradient(90deg, hsla(284, 50%, 17%, 1) 0%, hsla(333, 60%, 28%, 1) 100%);
+
 }
