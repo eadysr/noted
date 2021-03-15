@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :users, only: [:show, :edit, :update] do
+  resources :users, only: [:index, :show, :edit, :update] do
     resources :books, only: [:index, :new, :create]
     member do
-      get :list
+      get :list, :add, :accept, :decline, :remove, :friends
     end
   end
   resources :books, only: [:destroy]
